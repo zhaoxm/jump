@@ -19,12 +19,22 @@ func _physics_process(delta: float) -> void:
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	var direction := Input.get_axis("move_left", "move_right")
 	
+	# handle flip
 	if direction < 0:
 		animated_sprite.flip_h = true
-		
-	if direction >0:
+	if direction > 0:
 		animated_sprite.flip_h = false
+		
+	# handle animation
+	if is_on_floor():
+		if direction == 0:
+			animated_sprite.play("idle")
+		if direction != 0:
+			animated_sprite.play("run")
+	else:
+		animated_sprite.play("jump")
 	
+	# handle run direction
 	if direction:
 		velocity.x = direction * SPEED
 	else:
