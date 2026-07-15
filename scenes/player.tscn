@@ -181,7 +181,7 @@ z_index = 5
 sprite_frames = SubResource("SpriteFrames_qia7l")
 animation = &"jump"
 autoplay = "idle"
-frame_progress = 0.034155894
+frame_progress = 0.8066386
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=802874951]
 z_index = 5
