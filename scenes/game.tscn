@@ -206,3 +206,6 @@ autoplay = &"move"
 
 [node name="Slime" parent="." unique_id=1737823985 instance=ExtResource("6_p57ef")]
 position = Vector2(169, 53)
+
+[node name="Slime2" parent="." unique_id=1529860942 instance=ExtResource("6_p57ef")]
+position = Vector2(616, 132)
