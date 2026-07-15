@@ -46,6 +46,7 @@ size = Vector2(10, 10)
 [node name="Slime" type="Node2D" unique_id=1737823985]
 z_index = 1
 script = ExtResource("1_n6pvg")
+metadata/_edit_group_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=963185229]
 sprite_frames = SubResource("SpriteFrames_qia7l")

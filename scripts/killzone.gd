@@ -5,8 +5,12 @@ extends Area2D
 
 func _on_body_entered(body: Node2D) -> void:
 	print("You Killed")
+	body.get_node("CollisionShape2D").queue_free()
+	body.get_node("AnimatedSprite2D").set_deferred("rotation", -90)
+	Engine.time_scale = .5
 	timer.start()
 
 
 func _on_timer_timeout() -> void:
+	Engine.time_scale = 1
 	get_tree().reload_current_scene()
